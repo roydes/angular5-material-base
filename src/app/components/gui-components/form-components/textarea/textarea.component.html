@@ -1,0 +1,17 @@
+<div class="form-group">
+	<mat-form-field class="full-width" *ngIf="name==''">
+			<textarea  matInput rows="8" placeholder="{{label}}" [(ngModel)]="value" (ngModelChange)="update($event)" name="{{name}}">
+			</textarea>
+ 	</mat-form-field>
+	<mat-form-field class="full-width" [formGroup]="group" *ngIf="name!=''">
+			<textarea
+			    rows="8" 
+				matInput 
+				placeholder="{{label}}" 
+				[(ngModel)]="value" 
+				(ngModelChange)="update($event)" 
+				formControlName="{{name}}"  
+				name="{{name}}">
+			</textarea>
+	</mat-form-field>
+</div>

@@ -1,0 +1,17 @@
+<div class="form-group">
+	<div *ngIf="name==''" >
+		<mat-select placeholder="{{placeholder}}" [(ngModel)]="value" (ngModelChange)="update($event)" class="full-width" >
+		  <mat-option *ngFor="let option of options" [value]="option.value">
+		    {{ option.label }}
+		  </mat-option>
+		</mat-select>
+	</div>
+
+	<div [formGroup]="group"  *ngIf="name!=''">
+		<mat-select placeholder="{{placeholder}}" [(ngModel)]="value" (ngModelChange)="update($event)" class="full-width" formControlName="{{name}}">
+		  <mat-option *ngFor="let option of options" [value]="option.value">
+		    {{ option.label }}
+		  </mat-option>
+		</mat-select>
+	</div>
+</div>

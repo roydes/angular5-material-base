@@ -1,0 +1,13 @@
+<div class="example-container" [class.is-mobile]="mobileQuery.matches">
+  <app-toolbar 
+  (sidenavOpenedEmitter)="sidenavOpenedChange($event)"
+  [title]="name"
+  >
+  </app-toolbar>
+
+  <app-sidenav [(opened)]="sidenavOpened">
+  </app-sidenav>
+  <app-menu>
+  </app-menu>
+</div>
+
