@@ -1,7 +1,7 @@
 import {Compiler, Component, Injector, NgModule, NgModuleRef, ViewChild, ViewContainerRef, OnInit,ChangeDetectorRef,Input,Output } from '@angular/core';
 import {GUINavegationComponent} from '../navegation.component'
 import {MediaMatcher} from '@angular/cdk/layout';
-import {GUIModule} from '../../gui.module';
+import {GuiModule} from '../../gui.module';
 @Component({
   moduleId:module.id,
   selector: 'app-menu',
